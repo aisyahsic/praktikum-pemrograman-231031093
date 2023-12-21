@@ -38,5 +38,53 @@ q = 5
 hasil = p - q
 print('hasil',p,'-',q,'=',hasil)
 
+print()
+p = 20
+q = 5
+hasil = p + q
+print('hasil',p,'+',q,'=',hasil)
+
+print()
+p = 20
+q = 5
+hasil = p * q
+print('hasil',p,'*',q,'=',hasil)
+
+print()
+p = 20
+q = 5
+hasil = p / q
+print('hasil',p,'/',q,'=',hasil)
+
+print()
+p = 20
+q = 5
+hasil = p // q
+print('hasil',p,'//',q,'=',hasil)
+
+print()
+p = 20
+q = 5
+hasil = p % q
+print('hasil',p,'%',q,'=',hasil)
+
+print()
+p = 20
+q = 5
+hasil = p ** q
+print('hasil',p,'**',q,'=',hasil)
+ 
+
+
+
+
+
+
+
+
+
+
+
+
 
 
