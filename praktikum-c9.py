@@ -1,24 +1,45 @@
 import os
-import random as rd
-os.system('clear')
 
-limit = 3
-com = rd.randint(1, 10)
-a = True
+def judul():
+    os.system('cls')
+    print('PROGRAM MENGHITUNG VOLUME DAN LUAS PERMUKAAN')
+    print('BANGUN RUANG BALOK')
+    print()
 
-print("Ayo tebak angka yang dipilih oleh komputer (1-10)")
+def inputan():
+    p = float(input('Masukkan Panjang:'))
+    l = float(input('Masukkan Lebar:'  ))
+    t = float(input('Masukkan Tinggi:' ))
+    return p,l,t
 
-while a:
-    pilih = int(input("Tebak angka: "))
-    
-    if pilih == com:
-        print("Selamat, tebakanmu benar!")
-        a = False
+def perhitungan(p,l,t):
+    vol= p * l * t
+    luas = 2*(p*l + p*t + l*t)
+    luas_tanpa_tutup = luas - p*l
+
+def tampilkan(jenis,nilai):
+    print(f'Nilai dari {jenis} adalah : {nilai}')
+
+def pilihan():
+    pilih = input('Apakah lanjutakan? [y/n]')
+    if pilih == 'y':
+         a = True
     else:
-        limit -= 1
-        if limit > 0:
-            print(f"Kesempatan Kamu tersisa {limit} kali.")
-            a = True
-        else:
-            print(f"Maaf, angka yang dipilih oleh komputer adalah {com}. Kamu kalah!")
-            a = False
+         a = False
+         print('Sampai jumpa lagi.')
+    return a
+
+def main():
+    judul()
+    p,l,t = inputan()
+    # perhitungan
+    vol,luas,luas_tanpa_tutup = perhitungan(p,l,t)
+    # tampilkan
+    tampilkan ('volume',vol)
+    tampilkan ('luas permukaan',luas)
+    tampilkan ('luas permukaan tanpa tutup',luas_tanpa_tutup)
+    a = pilihan() # pilihan
+
+a = True
+while a:
+    main()
